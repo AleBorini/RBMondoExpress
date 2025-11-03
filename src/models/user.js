@@ -8,4 +8,4 @@ email: { type: String, required: true, unique: true },
 
 const user = mongoose.model('User', userSchema);
 
-module.exports = user;      
+module.exports = user;
