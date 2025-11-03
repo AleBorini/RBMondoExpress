@@ -31,5 +31,3 @@ app.get('/', requireAuth, (req, res) => {
 });
 
 
-
-
