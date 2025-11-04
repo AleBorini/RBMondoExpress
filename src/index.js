@@ -1,4 +1,5 @@
 require('./models/user');
+require('./models/track');
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -7,10 +8,12 @@ const mongoUri = "mongodb+srv://Follo:Follo@school-cluster-0.kxy8uw7.mongodb.net
 const authRoutes = require('./routes/authRoutes');
 const bodyParser = require('body-parser');
 const requireAuth = require('./middlewares/requireAuth');
+const trackRoutes = require('./routes/trackRoutes');
 
 
 app.use(bodyParser.json());
 app.use(authRoutes);
+app.use(trackRoutes);
 
 mongoose.connect(mongoUri);
 
